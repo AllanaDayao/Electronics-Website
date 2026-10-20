@@ -1,0 +1,25 @@
+{
+    "phones": [
+        {
+            "name": "Iphone 17",
+            "brand": "Apple",
+            "price": "$900",
+            "specs": "",
+            "images": "images/"
+        },
+        {
+            "name": "Galaxy Z Fold",
+            "brand": "Samsum",
+            "price": "$1,500",
+            "specs": "",
+            "images": "images/"
+        },
+        {
+            "name": "Iphone 13",
+            "brand": "Apple",
+            "price": "$730",
+            "specs": "",
+            "images": "images/"
+        }
+    ]
+}

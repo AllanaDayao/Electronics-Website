@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  margin: auto;
+}
+
+h1, h2, h3 { font: "Manrope", sans-serif; }
+h1 { font-size: 35px; margin-left: 25px;}
+h2 { font-size: 20px}
+h3 { font-size: 18px}
+
+p { 
+  color: #4a4d50;
+  margin: 10 10;
+}
+
+.product-card {
+  
+}
+
+.card-content {
+
+
+}
+
+

@@ -3,23 +3,23 @@
         {
             "name": "Iphone 17",
             "brand": "Apple",
-            "price": "$900",
+            "price": 700,
             "specs": "",
-            "images": "images/"
+            "image": "images/iphone13.jpg"
         },
         {
             "name": "Galaxy Z Fold",
-            "brand": "Samsum",
-            "price": "$1,500",
+            "brand": "Samsung",
+            "price": 1500,
             "specs": "",
-            "images": "images/"
+            "image": "images/iphone13.jpg"
         },
         {
             "name": "Iphone 13",
             "brand": "Apple",
-            "price": "$730",
+            "price": 730,
             "specs": "",
-            "images": "images/"
+            "image": "images/iphone13.jpg"
         }
     ]
 }

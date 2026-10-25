@@ -2,33 +2,133 @@
   <head>
     <title>Phones</title>
     <!--JQuery CDN-->
-    <script src="https://code.jquery.com/jquery-4.0.0.js"
-        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.js"
+      integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+      crossorigin="anonymous"
+    ></script>
 
+    <link rel = "stylesheet" href = "style.css">
+
+    <style type = "text/css">
+      #phone-page {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .filter-group {
+        display: inline-block;
+        margin: 20px;
+      }
+      .filter-btn {
+        border: 2px solid #eee;
+        width: 100px;
+        padding: 15px;
+        margin: 20px;
+      }
+      .filter-btn:hover {
+        background-color:#eee ;
+
+      }
+      .filter-btn:active {
+        background-color: #eee;
+      }
+      
+    </style>
   </head>
 
   <body>
-    <!--Introduction section-->
-    <div class = "header">
-        <h1>All Phones</h1>
-        <h3>A smarter phone for everyday</h3>
-    </div>  
+    <!-- Phone page container-->
+    <div id="phone-page" class="card-container">
+      <!-- Intro section with filter buttons -->
+      <div class="header">
+        <h1>PHONES</h1>
+        <p>
+          Powerful cameras, all-day batteries, and reliable connectivity in
+          every model
+        </p>
 
-    <!-- Explore phones
-            Horizontable tab section for different phone brands
-            Show phones in cards-->
-    <div class = "filter-buttons">
-        <button class = "brand-btn" onclick = "filterPhones()">All</button>
-        <button class = "brand-btn" onclick = "filterPhones()">Apple</button>
-        <button class = "brand-btn" onclick = "filterPhones()">Samsung</button>
-        <button class = "brand-btn" onclick = "filterPhones()">Apple</button>
+        <div class="filter-group">
+          <button class="filter-btn">All</button>
+          <button class="filter-btn">Apple</button>
+          <button class="filter-btn">Samsung</button>
+          <button class="filter-btn">Google</button>
+        </div>
+      </div>
+
+      <!-- container with phone cards -->
+      <div id="phone-showcase"></div>
+
+      <!-- event handling for buttons-->
+      <script>
+        window.onload = function () {
+
+          // separates all phones into categories
+          allPhones = [];
+          apple = [];
+          google = [];
+          samsung = [];
+          
+          // function to display each phone's card
+          function displayCard(brand) {
+            str = "";
+            brand.forEach(function (phone) {
+              str +=
+                "<div class = 'product-card'>" +
+                "<img src = '" + phone.image + "' width = '100px'>"
+                + "<div class = 'card-content'>" 
+                + "<h3>" + phone.name + "</h3>"
+                + "<h2>" + "Price: $" + phone.price + "</h2>"
+                + "<p>" + phone.specs + "</p>" 
+                + "</div>" +
+                "</div>";
+            });
+
+            document.getElementById("phone-showcase").innerHTML = str;
+          }
+
+          $.get("products.json", function (phones) {
+            allPhones = phones.phones;
+
+            // each phone is pushed to its corresponding categories w/o
+            allPhones.forEach(function (phone) {
+
+              if (phone.brand == "Apple") {
+                apple.push(phone);
+              } else if (phone.brand == "Samsung") {
+                samsung.push(phone);
+              } else if (phone.brand == "Google") {
+                google.push(phone);
+              }
+            });
+
+            // display all phones by default
+            displayCard(allPhones)
+          });
+
+
+          // adding event listeners to filter buttons
+          filterBtn = document.querySelectorAll(".filter-btn");
+          filterBtn.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+              // get seletected brand 
+              selectedBrand = this.innerText;
+
+              // display the phones
+              if (selectedBrand == "All") {
+                displayCard(allPhones);
+              } else if (selectedBrand == "Apple") {
+                displayCard(apple);
+              } else if (selectedBrand == "Google") {
+                displayCard(google);
+              } else if (selectedBrand == "Samsung") {
+                displayCard(samsung);
+              }
+            });
+          });
+        };
+      </script>
     </div>
-
-    <!-- Phone grid container-->
-     <div id = "phone-grid" class = "card-container"></div>
-
-    <script language = "javascript">
-      // horizontal tab nav for brands using
-    </script>
   </body>
 </html>

@@ -1,0 +1,12 @@
+[
+  { "device": "Phone",  "repair": "Screen replacement",  "price": 129, "time": "1 hr" },
+  { "device": "Phone",  "repair": "Battery replacement", "price": 79,  "time": "45 min" },
+  { "device": "Phone",  "repair": "Charging port",       "price": 69,  "time": "1 hr" },
+  { "device": "Phone",  "repair": "Back glass",          "price": 99,  "time": "2 hr" },
+  { "device": "Tablet", "repair": "Screen replacement",  "price": 179, "time": "2 hr" },
+  { "device": "Tablet", "repair": "Battery replacement", "price": 99,  "time": "1.5 hr" },
+  { "device": "Laptop", "repair": "Screen replacement",  "price": 249, "time": "1–2 days" },
+  { "device": "Laptop", "repair": "Battery replacement", "price": 129, "time": "1 day" },
+  { "device": "Laptop", "repair": "Keyboard replacement","price": 149, "time": "1–2 days" },
+  { "device": "Any",    "repair": "Diagnostics",         "price": 0,   "time": "30 min" }
+]

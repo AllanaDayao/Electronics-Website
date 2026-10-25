@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Electronics Store sells phones, tablets, and laptops and offers expert same-day device repairs.">
+  <meta name="keywords" content="electronics store, phones, tablets, laptops, phone repair, screen replacement, battery replacement">
+  <title>Electronics Store | Home</title>
+
+  <!--JQuery CDN-->
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style type="text/css">
+    body {
+      display: block;
+      background-color: #f7f7f4;
+      color: #171a1c;
+    }
+
+    a { text-decoration: none; }
+
+    .orange { color: #ff5d3a; }
+
+    /* buttons */
+    .btn-primary, .btn-secondary {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 0 10px 10px 0;
+      border: 1px solid #ff5d3a;
+      border-radius: 999px;
+    }
+
+    /*orange*/
+    .btn-primary {
+      background-color: #ff5d3a;
+      color: #fff;
+    }
+
+    .btn-primary:hover { background-color: #e94828; }
+
+    .btn-secondary {
+      border-color: #171a1c;
+      color: #171a1c;
+    }
+
+    .btn-secondary:hover {
+      background-color: #171a1c;
+      color: #fff;
+    }
+
+    /*top banner in the page */
+    .banner { border-bottom: 1px solid #dddddd; }
+
+    .banner .container {
+      display: flex;
+      align-items: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .banner-text { width: 50%; }
+
+    .banner h1 {
+      margin: 0 0 20px 0;
+      font-size: 56px;
+    }
+
+    .banner p {
+      margin: 0 0 28px 0;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* list of perks under two main buttons*/
+    .perks {
+      list-style-type: none;
+      margin: 20px 0 0 0;
+      padding: 0;
+    }
+
+    .perks li {
+      display: inline-block;
+      margin-right: 20px;
+      color: #4a4d50;
+    }
+
+    .banner-image {
+      width: 45%;
+      height: 420px;
+      margin-left: auto;
+      background-color: #c9f3dd;  /* shows until the image is added */
+      background-image: url(images/banner.jpg);
+      background-size: cover;
+      border-radius: 24px; 
+    }
+
+    .section { padding: 60px 0; }
+
+    .section-white { background-color: #ffffff; }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .text-link { color: #171a1c; }
+
+    .text-link:hover { color: #ff5d3a; }
+
+    .card-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pink  { background-color: #ffd9d0; }
+    .blue  { background-color: #d9e2ff; }
+    .green { background-color: #c9f3dd; }
+
+    .category-card {
+      display: block;
+      width: 32%;
+      padding: 100px 30px 30px 30px;
+      box-sizing: border-box;
+      color: #171a1c;
+      border-radius: 16px;
+    }
+
+    .category-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+    }
+
+    .category-card p { margin: 0 0 16px 0; }
+
+    .category-card:hover h3 { color: #ff5d3a; }
+
+    .product-card {
+      width: 32%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      border: 1px solid #dddddd;
+      border-radius: 16px; 
+    }
+
+    .product-card img {
+      width: auto;
+      height: 200px;
+    }
+
+    .product-card h3 { margin: 12px 0 0 0; }
+
+    .product-card h2 {
+      margin: 8px 0;
+      font-size: 20px;
+    }
+
+    /* ---------- repairs ---------- */
+    .repair-cta { text-align: center; }
+
+    .repair-cta p {
+      margin: 16px 0 28px 0;
+      font-size: 18px;
+    }
+
+    @media (max-width: 500px) {
+      .banner h1 { font-size: 40px; }
+      .section h2 { font-size: 28px; }
+      .product-card h2 { font-size: 20px; }
+      .section-heading { flex-direction: column; align-items: flex-start; }
+
+      /* stack the columns and cards on top of each other */
+      .banner .container, .card-row { flex-direction: column; }
+      .banner-text, .banner-image, .category-card, .product-card { width: 100%; }
+      .banner-image { height: 300px; margin-top: 40px; }
+      .category-card, .product-card { margin-bottom: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== nav bar ===== -->
+  <header class="site-header">
+    <div class="container">
+      <!-- logo links to the home page -->
+      <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="phones.html">Phones</a></li>
+          <li><a href="tablets.html">Tablets</a></li>
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="repairs.html">Repairs</a></li>
+          <li><a href="bookARepar.html">Book a repair</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="container">
+        <div class="banner-text">
+          <h1>Upgrade it.<br><span class="orange">Fix it.</span> Love it.</h1>
+          <p>
+            The latest devices and expert repairs, all under one roof. No jargon,
+            no surprises, just technology made simple.
+          </p>
+          <a href="shop.html" class="btn-primary">Shop devices &rarr;</a>
+          <a href="bookARepar.html" class="btn-secondary">Book a repair</a>
+
+          <ul class="perks">
+            <li>&#10003; Free delivery</li>
+            <li>&#10003; 12-month warranty</li>
+            <li>&#10003; Expert support</li>
+          </ul>
+        </div>
+
+        <!-- add iamge -->
+        <div class="banner-image"></div>
+      </div>
+    </section>
+
+    <!-- shop by category -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Shop by category</h2>
+          <a href="shop.html" class="text-link">View all products &rarr;</a>
+        </div>
+
+        <div class="card-row">
+          <a href="phones.html" class="category-card pink">
+            <h3>Phones</h3>
+            <p>Stay connected, beautifully.</p>
+            <strong>Shop phones &rarr;</strong>
+          </a>
+          <a href="tablets.html" class="category-card blue">
+            <h3>Tablets</h3>
+            <p>Big screen. Endless possibilities.</p>
+            <strong>Shop tablets &rarr;</strong>
+          </a>
+          <a href="laptops.html" class="category-card green">
+            <h3>Laptops</h3>
+            <p>Power for work and play.</p>
+            <strong>Shop laptops &rarr;</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- popular right now (cards filled in by JavaScript) -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Popular right now</h2>
+        </div>
+        <div id="featured" class="card-row"></div>
+      </div>
+    </section>
+
+    <!-- ===== repairs ===== -->
+    <section class="section">
+      <div class="container repair-cta">
+        <h2>Broken doesn't mean finished.</h2>
+        <p>
+          From cracked screens to tired batteries, our technicians
+          will get your device back to its best.
+        </p>
+        <a href="repairs.html" class="btn-primary">Explore repairs &rarr;</a>
+        <a href="bookARepar.html" class="btn-secondary">Book a repair</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer  -->
+  <footer class="site-footer">
+    <div class="container">
+      <!-- logo links to the home page -->
+      <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+      <p>&copy; 2026 Electronics Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.onload = function () {
+
+      function displayCard(brand) {
+        str = "";
+        brand.forEach(function (phone) {
+          str +=
+            "<div class = 'product-card'>" +
+            "<img src = '" + phone.image + "' width = '100px'>"
+            + "<div class = 'card-content'>"
+            + "<h3>" + phone.name + "</h3>"
+            + "<h2>" + "Price: $" + phone.price + "</h2>"
+            + "<p>" + phone.specs + "</p>"
+            + "</div>" +
+            "</div>";
+        });
+
+        document.getElementById("featured").innerHTML = str;
+      }
+
+      // read the same products.json the phones page uses
+      $.get("products.json", function (phones) {
+        displayCard(phones.phones);
+      });
+    };
+  </script>
+</body>
+</html>

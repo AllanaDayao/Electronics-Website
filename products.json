@@ -3,23 +3,30 @@
         {
             "name": "Iphone 17",
             "brand": "Apple",
-            "price": 700,
-            "specs": "",
-            "image": "images/iphone13.jpg"
+            "price": 799,
+            "specs": "6.3-inch Super Retina XDR OLED display; A19 chip; 48MP main camera and 48MP ultra-wide camera; 18MP Center Stage front camera; USB-C; Face ID; 256GB storage; all-day battery life.",
+            "image": "images/iphone17.jpg"
         },
         {
-            "name": "Galaxy Z Fold",
+            "name": "Galaxy S25",
             "brand": "Samsung",
-            "price": 1500,
-            "specs": "",
-            "image": "images/iphone13.jpg"
+            "price": 799,
+            "specs": "6.2-inch Dynamic AMOLED 2X display with up to 120Hz refresh rate; Snapdragon 8 Elite for Galaxy processor; 50MP main, 12MP ultra-wide, and 10MP 3x telephoto rear cameras; 12MP front camera; 5G; USB-C; 4000mAh battery; storage options vary by model.",
+            "image": "images/galaxyS25.jpg"
         },
         {
             "name": "Iphone 13",
             "brand": "Apple",
-            "price": 730,
-            "specs": "",
+            "price": 600,
+            "specs": "6.1-inch Super Retina XDR OLED display; A15 Bionic chip; dual 12MP rear cameras (wide and ultra-wide); 12MP TrueDepth front camera; Face ID; 5G; Lightning connector; storage options vary by model.",
             "image": "images/iphone13.jpg"
+        },
+        {
+            "name": "Pixel 9",
+            "brand": "Google",
+            "price": 799,
+            "specs": "6.3-inch Actua OLED display with up to 120Hz refresh rate; Google Tensor G4 chip; 50MP main and 48MP ultra-wide rear cameras; 10.5MP front camera; 5G; USB-C; 4700mAh typical battery capacity; 128GB or 256GB storage options.",
+            "image": "images/pixel9.jpg"
         }
     ]
 }

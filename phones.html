@@ -12,27 +12,66 @@
 
     <style type = "text/css">
       #phone-page {
+        width: 75%;
         margin: auto;
         display: flex;
         flex-direction: column;
+        justify-content: center;
       }
+      .header {
+        text-align: left;
+        display:flex;
+        flex-wrap: wrap;
+        margin: 30 0;
+      
+      }
+
+      .header h2 {
+        width: 400px !important; 
+      }
+
+      .header img {
+        max-width: 700px;
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+      }
+
       .filter-group {
         display: inline-block;
-        margin: 20px;
+        align-items: center;
+        justify-content: center;
+        margin: 20 0 30 0;
+        background-color: #FFF6E0;
       }
+
       .filter-btn {
-        border: 2px solid #eee;
+        background-color: #B0D1FF;
+        border: 2px solid #B0D1FF;
+        border-radius: 5px;
         width: 100px;
-        padding: 15px;
+        padding: 15 15;
         margin: 20px;
+
+        font-size: 20px;
       }
       .filter-btn:hover {
-        background-color:#eee ;
+        background-color:#96C2FF ;
 
       }
       .filter-btn:active {
-        background-color: #eee;
+        background-color: #96C2FF;
       }
+
+      #phone-showcase{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+      }
+      
       
     </style>
   </head>
@@ -43,18 +82,27 @@
       <!-- Intro section with filter buttons -->
       <div class="header">
         <h1>PHONES</h1>
-        <p>
+        <h2>
           Powerful cameras, all-day batteries, and reliable connectivity in
           every model
-        </p>
+        </h2>
+        <img src = "images/phones.jpg ">
+      </div>
 
-        <div class="filter-group">
+      <hr>
+
+      <div class="filter-group">
+          <h2>Explore the Range</h2>
+          <h3>Compare our lates phone modes and </h3>
+
           <button class="filter-btn">All</button>
           <button class="filter-btn">Apple</button>
           <button class="filter-btn">Samsung</button>
           <button class="filter-btn">Google</button>
-        </div>
       </div>
+
+
+     
 
       <!-- container with phone cards -->
       <div id="phone-showcase"></div>
@@ -75,10 +123,10 @@
             brand.forEach(function (phone) {
               str +=
                 "<div class = 'product-card'>" +
-                "<img src = '" + phone.image + "' width = '100px'>"
+                "<img src = '" + phone.image + "' width = '100%'>"
                 + "<div class = 'card-content'>" 
-                + "<h3>" + phone.name + "</h3>"
-                + "<h2>" + "Price: $" + phone.price + "</h2>"
+                + "<h2>" + phone.name + "</h2>"
+                + "<h3>" + "Price: $" + phone.price + "</h3>"
                 + "<p>" + phone.specs + "</p>" 
                 + "</div>" +
                 "</div>";

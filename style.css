@@ -1,24 +1,45 @@
 body {
-  display: flex;
-  margin: auto;
+  margin: 0;
+  max-width: 100vw;
 }
 
-h1, h2, h3 { font: "Manrope", sans-serif; }
-h1 { font-size: 35px; margin-left: 25px;}
-h2 { font-size: 20px}
-h3 { font-size: 18px}
+h1, h2, h3 { font: "Manrope", sans-serif; padding: 0 20; }
+h1 { font-size: 40px; margin-left: 25px; text-decoration: solid; font-weight: 800;}
+h2 { font-size: 30px;}
+h3 { font-size: 25px; color: #7d7676;}
 
 p { 
-  color: #4a4d50;
+  font-size: 20px;
+  color: #000000;
   margin: 10 10;
+  padding: 10 10;
 }
 
+img {
+  margin: 0 auto;
+  border-radius: 5px 5px 0 0;
+}
+
+
 .product-card {
-  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+ 
+  width: 350px;
+  height: auto;
+  margin: 50px;
+}
+
+.product-card img {
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .card-content {
-
+  padding: 2px 16px;
+  text-align: left;
 
 }
 

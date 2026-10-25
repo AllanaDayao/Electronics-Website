@@ -112,10 +112,6 @@
       font-size: 36px;
     }
 
-    .text-link { color: #171a1c; }
-
-    .text-link:hover { color: #ff5d3a; }
-
     .card-row {
       display: flex;
       justify-content: space-between;
@@ -164,7 +160,7 @@
       font-size: 20px;
     }
 
-    /* ---------- repairs ---------- */
+    /*  repairs  */
     .repair-cta { text-align: center; }
 
     .repair-cta p {
@@ -172,17 +168,11 @@
       font-size: 18px;
     }
 
+    /* phones: put side-by-side boxes on top of each other */
     @media (max-width: 500px) {
-      .banner h1 { font-size: 40px; }
-      .section h2 { font-size: 28px; }
-      .product-card h2 { font-size: 20px; }
-      .section-heading { flex-direction: column; align-items: flex-start; }
-
-      /* stack the columns and cards on top of each other */
       .banner .container, .card-row { flex-direction: column; }
-      .banner-text, .banner-image, .category-card, .product-card { width: 100%; }
-      .banner-image { height: 300px; margin-top: 40px; }
-      .category-card, .product-card { margin-bottom: 16px; }
+      .banner-text, .banner-image, .category-card, .product-card { width: 100%; margin: 0 0 16px 0; }
+      .banner h1 { font-size: 40px; }
     }
   </style>
 </head>
@@ -198,7 +188,6 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
           <li><a href="phones.html">Phones</a></li>
           <li><a href="tablets.html">Tablets</a></li>
           <li><a href="laptops.html">Laptops</a></li>
@@ -219,7 +208,7 @@
             The latest devices and expert repairs, all under one roof. No jargon,
             no surprises, just technology made simple.
           </p>
-          <a href="shop.html" class="btn-primary">Shop devices &rarr;</a>
+          <a href="phones.html" class="btn-primary">Shop devices &rarr;</a>
           <a href="bookARepar.html" class="btn-secondary">Book a repair</a>
 
           <ul class="perks">
@@ -239,7 +228,6 @@
       <div class="container">
         <div class="section-heading">
           <h2>Shop by category</h2>
-          <a href="shop.html" class="text-link">View all products &rarr;</a>
         </div>
 
         <div class="card-row">

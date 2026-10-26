@@ -289,9 +289,10 @@
         document.getElementById("featured").innerHTML = str;
       }
 
-      // read the same products.json the phones page uses, show the first 2 phones
-      $.get("products.json", function (phones) {
-        displayCard([phones.phones[0], phones.phones[1]]);
+      // read the same products.json the phones and tablets pages use:
+      // show the first 2 phones and the iPad Air (first tablet)
+      $.get("products.json", function (products) {
+        displayCard([products.phones[0], products.phones[1], products.tablets[0]]);
       });
     };
   </script>

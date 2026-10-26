@@ -100,7 +100,7 @@
   </style>
 </head>
 <body>
-
+    <!-- header  -->
     <header class="site-header">
     <div class="container">
         <!-- logo links to the home page -->
@@ -121,6 +121,7 @@
     </header>
 
     <main>
+        <!-- hero + h1 + intro para-->
         <section id="page-intro" class="repair-hero">
             <h1>Repairs<span style="color: #ff5d3a;">.</span></h1>
             <p id="intro">
@@ -130,10 +131,12 @@
             </p>
         </section>
 
+        <!-- button to book a repair -->
         <div id="bookRepair">
             <a href="bookARepar.html" class="btn-primary">Book a Repair</a>
         </div>
 
+        <!-- price list as a table -->
         <section>
             <div class="section-heading">
             <h2>Prices</h2>
@@ -146,6 +149,7 @@
             </table>
         </section>
 
+        <!-- steps of the repair process as an ol  -->
         <section>
             <div class="section-heading">
                 <h2>How Repairs Work</h2>
@@ -168,21 +172,22 @@
         </div>
         </footer>
         <script>
-    $.getJSON("repairs.json", function (repairs) {
-        let output = "";
+            // populates the prices table
+            $.getJSON("repairs.json", function (repairs) {
+                let output = "";
 
-        for (let item of repairs) {
-            let price = "$" + item.price;
-            if (item.price === 0) {
-                price = "Free";
-            }
-            
-            output += "<tr><td>" + item.device + "</td><td>" + item.repair + "</td><td>" +
-                      price + "</td><td>" + item.time + "</td></tr>"
-        }
+                for (let item of repairs) {
+                    let price = "$" + item.price;
+                    if (item.price === 0) {
+                        price = "Free";
+                    }
+                    
+                    output += "<tr><td>" + item.device + "</td><td>" + item.repair + "</td><td>" +
+                                price + "</td><td>" + item.time + "</td></tr>"
+                }
 
-        $("#price-list tbody").html(output);
-    })
-  </script>
+                $("#price-list tbody").html(output);
+            })
+        </script>
 </body>
 </html>

@@ -41,9 +41,13 @@ img {
 
 .card-content {
   padding: 2px 16px;
-  text-align: left;
-
+  text-align: center;
+  font-family: "Manrope", sans-serif;
 }
+
+.card-content h2 { font-size: 24px; }
+.card-content h3 { font-size: 20px; }
+.card-content p { font-size: 16px; }
 
 /* nav bar and footer for every page*/
 .container {

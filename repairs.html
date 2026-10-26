@@ -28,6 +28,20 @@
     #intro {
         max-width: 650px;
     }
+    .repair-hero {
+        background-image: linear-gradient(rgb(0 0 0 / .55), rgb(0 0 0 / .55)), url(images/repairs.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 24px;
+        padding: 80px 32px;
+        margin-top: 24px;
+        margin-bottom: 2px;
+    }
+    .repair-hero h1, .repair-hero p {
+        color: #fff;
+        margin: 0 0 16px;
+        padding: 0;
+    }
     #price-list {
         width: 100%;
         border-collapse: collapse;
@@ -42,7 +56,8 @@
         line-height: 1.8;
     }
     #bookRepair {
-        margin: 2em 0;
+        margin: 0 0 3em;
+        text-align: left;
     }
     #price-list th {
         border-bottom: 2px solid #171a1c;
@@ -50,12 +65,33 @@
     #price-list td {
         border-bottom: 1px solid rgb(0 0 0 / .1);
     }
-    #bookRepair a {
+    #bookRepair a{
         text-decoration: none;
+        margin-top: 24px;
+    }
+    /* buttons */
+    .btn-primary, .btn-secondary {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 0 10px 10px 0;
+      border: 1px solid #ff5d3a;
+      border-radius: 999px;
+    }
+    /*orange*/
+    .btn-primary {
+      background-color: #ff5d3a;
+      color: #fff;
+    }
+    .btn-primary:hover {
+        background-color: #e94828;
+        border-color: #e94828;
     }
     @media (max-width: 500px) {
         #price-list {
             font-size: 14px;
+        }
+        .repair-hero {
+            padding: 48px 20px;
         }
     }
   </style>
@@ -82,7 +118,7 @@
     </header>
 
     <main>
-        <section id="page-intro">
+        <section id="page-intro" class="repair-hero">
             <h1>Repairs</h1>
             <p id="intro">
                 Cracked screen? Dying battery? Our technicians fix phones, tablets, and laptops in-store,
@@ -90,6 +126,10 @@
                 90-day warranty on parts, and you approve the price before we touch anything.
             </p>
         </section>
+
+        <div id="bookRepair">
+            <a href="bookARepar.html" class="btn-primary">Book a Repair</a>
+        </div>
 
         <section>
             <div class="section-heading">
@@ -114,10 +154,6 @@
                 <li>Pick it up, usually the same day.</li>
             </ol>
         </section>
-
-        <div id="bookRepair">
-            <a href="bookARepar.html" class="btn-primary">Book a Repair</a>
-        </div>
             </main>
 
   <!-- footer  -->

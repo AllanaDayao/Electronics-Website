@@ -62,7 +62,6 @@ img {
   position: relative;
 
   border-radius: 20px;
-  border: 20px solid #ff5d3a;
 }
 
 .filter-group {
@@ -72,15 +71,16 @@ img {
   margin: 20 0 30 0;
 
   background-color: #FFF6E0;
-  border-top: 2px solid #dddddd;;
-  border-bottom: 2px solid #dddddd;;
+  border-top: 2px solid#ff5d3a;
+  border-bottom: 2px solid #ff5d3a;
 }
 
 .filter-btn {
   background-color: #B0D1FF;
   border: 2px solid #B0D1FF;
-  border-radius: 5px;
-  width: 120px;
+  border-radius: 999px;
+  min-width: 100px;
+  width: auto;
   padding: 15 15;
   margin: 15px;
 

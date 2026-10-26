@@ -97,5 +97,53 @@
             "battery": "16 hrs",
             "image": "images/lenovo-slim5x.jpg"
         }
+
+    ],
+    
+    "tablets": [
+        {
+            "name": "Ipad Air",
+            "brand": "Apple",
+            "price": 799,
+            "specs": "10.9-inch Liquid Retina display; Apple M1 chip; 12MP Ultra Wide front camera with Center Stage; Wi-Fi 6; Touch ID; all-day battery life.",
+            "image": "images/ipadAir.jpg"
+        },
+        {
+            "name": "Galaxy Tab S12",
+            "brand": "Samsung",
+            "price": 1399,
+            "specs": "12.4-inch Super AMOLED display with 120Hz refresh rate; high-performance processor; dual rear cameras; S-Pen included; large capacity battery for all-day use.",
+            "image": "images/galaxyS25.jpg"
+        },
+        {
+            "name": "Idea Tab Plus",
+            "brand": "Lenove",
+            "price": 294,
+            "specs": "10.1-inch FHD IPS display; Octa-core processor; dual speakers with Dolby Atmos; 8MP rear camera; lightweight design built for everyday family entertainment.",
+            "image": "images/ideaTab.jpg"
+        },
+        {
+            "name": "MovinkPad 11",
+            "brand": "Wacom",
+            "price": 499,
+            "specs": "11.2-inch OLED pen display; professional stylus support for creators; high color accuracy; USB-C connectivity; ultra-slim portable design.",
+            "image": "images/movink.jpg"
+        },
+        {
+            "name": "Fire HD 10",
+            "brand": "Amazon",
+            "price": 799,
+            "specs": "10.1-inch 1080p Full HD display; 3GB RAM; 32GB expandable storage; up to 12 hours of battery life; optimized for streaming apps and reading.",
+            "image": "images/fireHD.jpg"
+        },
+        {
+            "name": "OnePlus Pad 3",
+            "brand": "Microsoft",
+            "price": 799,
+            "specs": "11.6-inch high-refresh-rate display; fast charging support; immersive quad-speaker audio; powerful multitasking capabilities and smooth gaming performance.",
+            "image": "images/oneplus.jpg"
+        }
+
     ]
+    
 }

@@ -18,51 +18,7 @@
         flex-direction: column;
         justify-content: center;
       }
-      .header {
-        text-align: left;
-        display:flex;
-        flex-wrap: wrap;
-        margin: 30 0;
       
-      }
-
-      .header h2 {
-        width: 400px !important; 
-      }
-
-      .header img {
-        max-width: 700px;
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-      }
-
-      .filter-group {
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        margin: 20 0 30 0;
-        background-color: #FFF6E0;
-      }
-
-      .filter-btn {
-        background-color: #B0D1FF;
-        border: 2px solid #B0D1FF;
-        border-radius: 5px;
-        width: 100px;
-        padding: 15 15;
-        margin: 20px;
-
-        font-size: 20px;
-      }
-      .filter-btn:hover {
-        background-color:#96C2FF ;
-
-      }
-      .filter-btn:active {
-        background-color: #96C2FF;
-      }
 
       #phone-showcase{
         display: flex;
@@ -77,8 +33,30 @@
   </head>
 
   <body>
+    <!-- ===== nav bar ===== -->
+      <header class="site-header">
+      <div class="container">
+        <!-- logo links to the home page -->
+        <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+
+        <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phones.html" class = "active">Phones</a></li>
+          <li><a href="tablets.html">Tablets</a></li>
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="repairs.html">Repairs</a></li>
+          <li><a href="bookARepar.html">Book a repair</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        </nav>
+      </div>
+    </header>
+
+
     <!-- Phone page container-->
     <div id="phone-page" class="card-container">
+
       <!-- Intro section with filter buttons -->
       <div class="header">
         <h1>PHONES</h1>
@@ -100,9 +78,8 @@
           <button class="filter-btn">Samsung</button>
           <button class="filter-btn">Google</button>
       </div>
-
-
-     
+      
+     <hr>
 
       <!-- container with phone cards -->
       <div id="phone-showcase"></div>

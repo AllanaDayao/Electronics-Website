@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <title>Phones</title>
+    <!--JQuery CDN-->
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.js"
+      integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel = "stylesheet" href = "style.css">
+
+    <style type = "text/css">
+      #tablet-page {
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+
+      #tablet-showcase{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+      }
+      
+      
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== nav bar ===== -->
+      <header class="site-header">
+      <div class="container">
+        <!-- logo links to the home page -->
+        <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+
+        <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phones.html" >Phones</a></li>
+          <li><a href="tablets.html" class = "active">Tablets</a></li>
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="repairs.html">Repairs</a></li>
+          <li><a href="bookARepar.html">Book a repair</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Phone page container-->
+    <div id="tablet-page" class="card-container">
+
+      <!-- Intro section with filter buttons -->
+      <div class="header">
+        <h1>TABLETS</h1>
+        <h2>
+          Power, portability, and creativity in your hands.
+        </h2>
+        <img src = "images/tablets.jpg ">
+      </div>
+
+      <hr>
+
+      <div class="filter-group">
+          <h2>Explore the Range</h2>
+          <h3>From creative digital canvases to immersive media streaming devices, find the 
+            ideal tablet for you.
+          </h3>
+
+          <button class="filter-btn">All</button>
+          <button class="filter-btn">Under $500</button>
+          <button class="filter-btn">$500 and Up</button>
+      </div>
+      
+     <hr>
+
+      <!-- container with phone cards -->
+      <div id="tablet-showcase"></div>
+
+      <!-- event handling for buttons-->
+      <script>
+        window.onload = function () {
+
+          // separates all phones into categories
+          allTablets = [];
+          under500 = [];
+          above500 = [];
+          
+          // function to display each phone's card
+          function displayCard(brand) {
+            str = "";
+            brand.forEach(function (tablet) {
+              str +=
+                "<div class = 'product-card'>" +
+                "<img src = '" + tablet.image + "' width = '100%'>"
+                + "<div class = 'card-content'>" 
+                + "<h2>" + tablet.name + "</h2>"
+                + "<h3>" + "Price: $" + tablet.price + "</h3>"
+                + "<p>" + tablet.specs + "</p>" 
+                + "</div>" +
+                "</div>";
+            });
+
+            document.getElementById("tablet-showcase").innerHTML = str;
+          }
+
+          $.get("products.json", function (tablets) {
+            allTablets = tablets.tablets;
+
+            // each tablet is pushed to its corresponding categories w/o
+            allTablets.forEach(function (tablet) {
+
+              if (tablet.price < 500) {
+                under500.push(tablet);
+              } else if (tablet.price >= 500) {
+                above500.push(tablet);
+              }
+            });
+
+            // display all tabelts by default
+            displayCard(allTablets)
+          });
+
+
+          // adding event listeners to filter buttons
+          filterBtn = document.querySelectorAll(".filter-btn");
+          filterBtn.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+              // get seletected button
+              selectedBtn = this.innerText;
+
+              // display the tablet
+              if (selectedBtn == "All") {
+                displayCard(allTablets);
+              } else if (selectedBtn  == "Under $500") {
+                displayCard(under500);
+              } else if (selectedBtn  == "$500 and Up") {
+                displayCard(above500);
+              } 
+
+            });
+          });
+        };
+      </script>
+    </div>
+  </body>
+</html>

@@ -28,5 +28,74 @@
             "specs": "6.3-inch Actua OLED display with up to 120Hz refresh rate; Google Tensor G4 chip; 50MP main and 48MP ultra-wide rear cameras; 10.5MP front camera; 5G; USB-C; 4700mAh typical battery capacity; 128GB or 256GB storage options.",
             "image": "images/pixel9.jpg"
         }
+    ],
+
+    "laptops": [
+        {
+            "name": "MacBook Pro 16 (M5 Pro)",
+            "brand": "Apple",
+            "price": 2699,
+            "processor": "Apple M5 Pro",
+            "ram": "24GB",
+            "storage": "1TB SSD",
+            "screen": "16.2\"",
+            "battery": "24 hrs",
+            "image": "images/macbook-pro.jpg"
+        },
+        {
+            "name": "Acer Aspire Go 15",
+            "brand": "Acer",
+            "price": 399,
+            "processor": "Snapdragon C",
+            "ram": "8GB",
+            "storage": "512GB SSD",
+            "screen": "15.6\"",
+            "battery": "10 hrs",
+            "image": "images/acer-aspire.jpg"
+        },
+        {
+            "name": "Razer Blade 16",
+            "brand": "Razer",
+            "price": 3499,
+            "processor": "Intel Core Ultra 9 386H",
+            "ram": "32GB",
+            "storage": "1TB SSD",
+            "screen": "16\"",
+            "battery": "6 hrs",
+            "image": "images/razer-blade.jpg"
+        },
+        {
+            "name": "Dell XPS 14",
+            "brand": "Dell",
+            "price": 1599,
+            "processor": "Intel Core Ultra 5 325",
+            "ram": "16GB",
+            "storage": "512GB SSD",
+            "screen": "14\"",
+            "battery": "14 hrs",
+            "image": "images/dell-xps.jpg"
+        },
+        {
+            "name": "MacBook Air 13 (M5)",
+            "brand": "Apple",
+            "price": 1099,
+            "processor": "Apple M5",
+            "ram": "16GB",
+            "storage": "512GB SSD",
+            "screen": "13.6\"",
+            "battery": "15 hrs",
+            "image": "images/macbook-air.jpg"
+        },
+        {
+            "name": "Lenovo IdeaPad Slim 5x",
+            "brand": "Lenovo",
+            "price": 849,
+            "processor": "Snapdragon X2 Plus",
+            "ram": "16GB",
+            "storage": "512GB SSD",
+            "screen": "15.3\"",
+            "battery": "16 hrs",
+            "image": "images/lenovo-slim5x.jpg"
+        }
     ]
 }

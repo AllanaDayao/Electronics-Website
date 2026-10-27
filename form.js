@@ -1,23 +1,7 @@
 const repairPrices = {
     "Screen": 129,
     "Battery": 79,
-    "Water Damange": 99,
-    "Software Diagnostic": 49,
-    "Camera Repair": 119
 };
-
-// populate repair prices
-window.onload = function() {
-    list =  "";
-
-    for (repair in repairPrices) {
-        list += "<li><strong>" + repair + ":</strong> $" + repairPrices[repair] + "</li>";
-    }
-
-    list += "</ul>";
-
-    document.getElementById("priceList").innerHTML = list;
-}
 
 
 function validate() {

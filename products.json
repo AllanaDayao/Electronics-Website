@@ -27,7 +27,22 @@
             "price": 799,
             "specs": "6.3-inch Actua OLED display with up to 120Hz refresh rate; Google Tensor G4 chip; 50MP main and 48MP ultra-wide rear cameras; 10.5MP front camera; 5G; USB-C; 4700mAh typical battery capacity; 128GB or 256GB storage options.",
             "image": "images/pixel9.jpg"
+        },
+        {
+            "name": "Galaxy Z Flip 7",
+            "brand": "Samsung",
+            "price": 999,
+            "specs": "Foldable 6.7-inch FHD+ Dynamic AMOLED 2X inner display; 3.4-inch Super AMOLED flex window cover screen; Snapdragon 8 Gen 4 processor; dual rear camera system; 4000mAh dual battery.",
+            "image": "images/galaxyZFlip.jpg"
+        },
+        {
+            "name": "Pixel 11 Pro Fold",
+            "brand": "Google",
+            "price": 1899,
+            "specs": "8.0-inch flexible inner OLED foldable screen with 120Hz refresh rate; 6.4-inch outer cover display; Google Tensor G6 chip; advanced triple rear camera system optimized for foldable angles; multi-window productivity; 5G; USB-C.",
+            "image": "images/pixel11Fold.jpg"
         }
+
     ],
 
     "laptops": [

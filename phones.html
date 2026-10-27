@@ -18,14 +18,32 @@
         flex-direction: column;
         justify-content: center;
       }
-      
-
       #phone-showcase{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        
+      }
+
+      .phone-hero {
+        background-image: linear-gradient(rgb(0 0 0/ .55), rgb( 0 0 0/ .55)), url(images/phones.jpg);
+        background-size:cover;
+        background-position: center;
+        border-radius: 24px;
+        padding: 60px 32px;
+        margin: 30px auto;
+        max-width: 1100px;
+      
+      }
+      .phone-hero h1 {
+        font-weight: 800;
+        color: #fff;
+      }
+      .phone-hero p {
+        color: #fff;
+      }
+      .btn-primary {
+        margin-left: 15px !important;
       }
       
       
@@ -58,25 +76,22 @@
     <div id="phone-page" class="card-container">
 
       <!-- Intro section -->
-      <div class="header">
+      <section class="phone-hero">
         <h1>Phones<span style="color: #ff5d3a;">.</span></h1>
         <p>
-          Powerful cameras, all-day batteries, and reliable connectivity in
-          every model
+          Discover cutting-edge smartphones featuring powerful professional camera systems, all-all intelligent batteries, and lightning fast 5G connectivity across top global brands.
         </p>
-        <img src = "images/phones.jpg ">
-
-        <!-- button to book a laptop repair-->
+        
+      </section>
+      <!-- button to book a laptop repair-->
         <div id="bookRepair">
-            <a href="bookARepar.html" class="btn-primary">Book a Phone Repair</a>
+            <a href="bookARepair.html" class="btn-primary">Book a Phone Repair</a>
         </div>
-      </div>
-
       <hr>
 
       <div class="filter-group">
           <h2>Explore the Range</h2>
-          <h3>Compare our lates phone modes and </h3>
+          <h3>Filter our lastest phones by manufacturer and compare pricing and specifications</h3>
 
           <button class="filter-btn">All</button>
           <button class="filter-btn">Apple</button>
@@ -88,6 +103,15 @@
 
       <!-- container with phone cards -->
       <div id="phone-showcase"></div>
+
+      <!-- footer  -->
+      <footer class="site-footer">
+        <div class="container">
+        <!-- logo links to the home page -->
+          <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+          <p>&copy; 2026 Electronics Store. All rights reserved.</p>
+        </div>
+      </footer>
 
       <!-- event handling for buttons-->
       <script>

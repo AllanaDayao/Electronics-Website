@@ -1,12 +1,51 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="electronics store, about us, contact, Medford electronics, phone repair">
+        <title>Electronics Store | About</title>
+
         <link rel="stylesheet" href="style.css" />
 
+        <style type="text/css">
+            #about-page {
+                width: 100%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
 
+            #stats-showcase {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .about-intro {
+                display: flex;
+                align-items: center;
+                padding: 60px 20px;
+            }
+
+            .about-text { width: 50%; }
+
+            .about-image {
+                height: 400px;
+                margin-left: auto;
+                border-radius: 24px;
+            }
+
+            @media (max-width: 500px) {
+                .about-intro { flex-direction: column; }
+                .about-text, .about-image { width: 100%; }
+            }
+        </style>
     </head>
 
     <body>
-    <!-- ===== nav bar ===== -->
+    <!--  nav bar  -->
       <header class="site-header">
       <div class="container">
         <!-- logo links to the home page -->
@@ -20,23 +59,77 @@
           <li><a href="laptops.html">Laptops</a></li>
           <li><a href="repairs.html">Repairs</a></li>
           <li><a href="bookARepair.html">Book a repair</a></li>
-          <li>
-            <div class = "about-dropdown">
-              <button class = "about-btn">About </button>
-              <div class = "drop-content">
-                <a href = "about.html" class = "active">About</a>
-                <a href = "faq.html">FAQ</a>
-                <a href = "contact.html">Contact</a>
-              </div>
-            </div>
-          </li>
+          <li><a href="about.html" class="active">About</a></li>
         </ul>
         </nav>
       </div>
     </header>
 
+    <!-- About page container -->
+    <div id="about-page">
 
+        <!-- intro: text on the left, picture on the right -->
+        <div class="about-intro">
+            <div class="about-text">
+                <h1>About Us<span class="orange">.</span></h1>
+                <h2>Better tech. Honest help.</h2>
+                <p>
+                    Electronics Store is a local Medford shop for phones, tablets, and laptops,
+                    plus expert repairs, all under one roof.
+                </p>
+                <ul>
+                    <li><p>We sell the latest phones, tablets, and laptops from Apple, Samsung, Google, and more.</p></li>
+                    <li><p>We repair cracked screens, tired batteries, charging ports, and keyboards, most of them the same day.</p></li>
+                    <li><p>Every repair starts with a free diagnosis, and a 90-day warranty on parts</p></li>
+                </ul>
+            </div>
+            <img src="images/handshake.jpg" class="about-image" alt="Customer and technician shaking hands">
+        </div>
 
+        <!-- mission statement -->
+        <div class="filter-group">
+            <h2>Our Mission</h2>
+            <h3>
+                We strive to connect people with the future of innovation by delivering
+                cutting-edge electronics with honest, expert guidance.
+            </h3>
+        </div>
+
+        <!-- by the numbers (same cards as the product pages) -->
+        <div id="stats-showcase">
+            <div class="product-card">
+                <div class="card-content">
+                    <h2 style="font-size: 30px">98%</h2>
+                    <p>of customers rated a 5-star experience</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-content">
+                    <h2 style="font-size: 30px">Same day</h2>
+                    <p>most repairs are finished the same day</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-content">
+                    <h2 style="font-size: 30px">Free</h2>
+                    <p>diagnosis on every device</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact -->
+        <div class="filter-group">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out using the information below.</p>
+            <p>123 Electric Street, Medford, MA</p>
+            <p>(555) 123-4567</p>
+            <p>
+                <a href="bookARepair.html" class="btn-primary">Book a repair</a>
+                <a href="repairs.html" class="btn-secondary">See repair prices</a>
+            </p>
+        </div>
+
+    </div>
 
         <!-- footer  -->
     <footer class="site-footer">
@@ -47,8 +140,5 @@
       </div>
     </footer>
 
-
     </body>
-
-
 </html>

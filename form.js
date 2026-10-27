@@ -14,6 +14,7 @@ function validate() {
     document.getElementById("urgencyError").innerHTML = "";
     document.getElementById("describeError").innerHTML = "";
     document.getElementById("thank-you").innerHTML = "";
+    
     // checks if name text box is filled
     nameText = document.getElementById("the_name").value.trim();
     if (nameText == "") {

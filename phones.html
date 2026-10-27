@@ -65,7 +65,16 @@
           <li><a href="laptops.html">Laptops</a></li>
           <li><a href="repairs.html">Repairs</a></li>
           <li><a href="bookARepair.html">Book a repair</a></li>
-          <li><a href="about.html">About</a></li>
+          <li>
+            <div class = "about-dropdown">
+              <button class = "about-btn">About </button>
+              <div class = "drop-content">
+                <a href = "about.html">About</a>
+                <a href = "faq.html">FAQ</a>
+                <a href = "contact.html">Contact</a>
+              </div>
+            </div>
+          </li>
         </ul>
         </nav>
       </div>
@@ -123,7 +132,7 @@
           google = [];
           samsung = [];
           
-          // function to display each phone's card
+          // function to display each phone's card based on brand
           function displayCard(brand) {
             str = "";
             brand.forEach(function (phone) {
@@ -144,7 +153,7 @@
           $.get("products.json", function (phones) {
             allPhones = phones.phones;
 
-            // each phone is pushed to its corresponding categories w/o
+            // each phone is pushed to its corresponding brand array 
             allPhones.forEach(function (phone) {
 
               if (phone.brand == "Apple") {

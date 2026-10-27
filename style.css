@@ -135,6 +135,7 @@ a { text-decoration: none; }
 
 
 .product-card {
+  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 
@@ -148,6 +149,10 @@ a { text-decoration: none; }
   object-fit: cover;
   display: block;
   margin: 0 auto;
+}
+
+.product-card h3 {
+  color: #ff5d3a;
 }
 
 .card-content {
@@ -174,7 +179,8 @@ a { text-decoration: none; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
+  box-sizing: border-box;     
+
 }
 
 .site-header {

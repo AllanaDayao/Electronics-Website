@@ -63,6 +63,7 @@
 
     .banner h1 {
       margin: 0 0 20px 0;
+      padding: 0;
       font-size: 56px;
     }
 
@@ -90,7 +91,7 @@
       height: 420px;
       margin-left: auto;
       background-color: #c9f3dd;  /* shows until the image is added */
-      background-image: url(images/banner.jpg);
+      background-image: url(images/banner.jpeg);
       background-size: cover;
       border-radius: 24px; 
     }
@@ -106,8 +107,9 @@
       margin-bottom: 30px;
     }
 
-    .section h2 {
+    .section-heading h2, .repair-cta h2 {
       margin: 0;
+      padding: 0;
       font-size: 36px;
     }
 
@@ -131,6 +133,7 @@
 
     .category-card h3 {
       margin: 0 0 8px 0;
+      padding: 0;
       font-size: 24px;
     }
 
@@ -138,25 +141,10 @@
 
     .category-card:hover h3 { color: #ff5d3a; }
 
-    .product-card {
-      width: 32%;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
-      border: 1px solid #dddddd;
-      border-radius: 16px; 
-    }
-
-    .product-card img {
-      width: auto;
-      height: 200px;
-    }
-
-    .product-card h3 { margin: 12px 0 0 0; }
-
-    .product-card h2 {
-      margin: 8px 0;
-      font-size: 20px;
+    #featured {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     /*  repairs  */
@@ -167,7 +155,6 @@
       font-size: 18px;
     }
 
-    /* phones: put side-by-side boxes on top of each other */
     @media (max-width: 500px) {
       .banner .container, .card-row { flex-direction: column; }
       .banner-text, .banner-image, .category-card, .product-card { width: 100%; margin: 0 0 16px 0; }
@@ -255,11 +242,11 @@
         <div class="section-heading">
           <h2>Popular right now</h2>
         </div>
-        <div id="featured" class="card-row"></div>
+        <div id="featured"></div>
       </div>
     </section>
 
-    <!-- ===== repairs ===== -->
+    <!--  repairs  -->
     <section class="section">
       <div class="container repair-cta">
         <h2>Broken doesn't mean finished.</h2>
@@ -290,10 +277,10 @@
         brand.forEach(function (phone) {
           str +=
             "<div class = 'product-card'>" +
-            "<img src = '" + phone.image + "' width = '100px'>"
+            "<img src = '" + phone.image + "' width = '100%'>"
             + "<div class = 'card-content'>"
-            + "<h3>" + phone.name + "</h3>"
-            + "<h2>" + "Price: $" + phone.price + "</h2>"
+            + "<h2>" + phone.name + "</h2>"
+            + "<h3>" + "Price: $" + phone.price + "</h3>"
             + "<p>" + phone.specs + "</p>"
             + "</div>" +
             "</div>";
@@ -302,9 +289,10 @@
         document.getElementById("featured").innerHTML = str;
       }
 
-      // read the same products.json the phones page uses
-      $.get("products.json", function (phones) {
-        displayCard(phones.phones);
+      // read the same products.json the phones and tablets pages use:
+      // show the first 2 phones and the iPad Air (first tablet)
+      $.get("products.json", function (products) {
+        displayCard([products.phones[0], products.phones[1], products.tablets[0]]);
       });
     };
   </script>

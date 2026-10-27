@@ -17,6 +17,24 @@
             margin: 0 auto;
             padding: 0 16px;
         }
+        /* same style as repairs.html */
+        .laptops-hero {
+            background-image: linear-gradient(rgb(0 0 0 / .55), rgb(0 0 0 / .55)), url(images/laptops-hero.jpg);
+            background-size: cover;
+            background-position: center 40%;
+            border-radius: 24px;
+            padding: 80px 32px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .laptops-hero h1, .laptops-hero p {
+            color: #fff;
+            margin: 0 0 16px;
+            padding: 0;
+        }
+        #intro {
+            max-width: 650px;
+        }
         h1 {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 800;
@@ -142,6 +160,7 @@
             #brandFilter { margin-left: 0; }
             .laptop-row { grid-template-columns: 1fr; padding: 20px; }
             .laptop-img { grid-row: auto; height: 260px; }
+            .laptops-hero { padding: 48px 20px; }
         }
   </style>
 </head>
@@ -168,7 +187,14 @@
     </header>
 
     <main>
-        <h1>Laptops<span style="color: #ff5d3a;">.</span></h1>
+        <!-- hero + h1 + intro para -->
+        <section id="page-intro" class="laptops-hero">
+            <h1>Laptops<span style="color: #ff5d3a;">.</span></h1>
+            <p id="intro">
+                From everyday ultrabooks to full-power gaming rigs, every laptop we sell is
+                tested, cleaned, and backed by our 12-month warranty.
+            </p>
+        </section>
         
         <!-- button to book a laptop repair-->
         <div id="bookRepair">

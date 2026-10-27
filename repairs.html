@@ -72,23 +72,7 @@
     .section-heading h2 {
         padding: 0;
     }
-    /* buttons */
-    .btn-primary, .btn-secondary {
-      display: inline-block;
-      padding: 12px 22px;
-      margin: 0 10px 10px 0;
-      border: 1px solid #ff5d3a;
-      border-radius: 999px;
-    }
-    /*orange*/
-    .btn-primary {
-      background-color: #ff5d3a;
-      color: #fff;
-    }
-    .btn-primary:hover {
-        background-color: #e94828;
-        border-color: #e94828;
-    }
+    
     @media (max-width: 500px) {
         #price-list {
             font-size: 14px;
@@ -100,24 +84,33 @@
   </style>
 </head>
 <body>
-    <!-- header  -->
-    <header class="site-header">
-    <div class="container">
+    <!-- ===== nav bar ===== -->
+      <header class="site-header">
+      <div class="container">
         <!-- logo links to the home page -->
         <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
 
         <nav>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phones.html">Phones</a></li>
-            <li><a href="tablets.html">Tablets</a></li>
-            <li><a href="laptops.html">Laptops</a></li>
-            <li><a href="repairs.html" class="active">Repairs</a></li>
-            <li><a href="bookARepar.html">Book a repair</a></li>
-            <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phones.html" >Phones</a></li>
+          <li><a href="tablets.html">Tablets</a></li>
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="repairs.html" class = "active">Repairs</a></li>
+          <li><a href="bookARepair.html">Book a repair</a></li>
+          <li>
+            <div class = "about-dropdown">
+              <button class = "about-btn">About </button>
+              <div class = "drop-content">
+                <a href = "about.html">About</a>
+                <a href = "faq.html">FAQ</a>
+                <a href = "contact.html">Contact</a>
+              </div>
+            </div>
+          </li>
         </ul>
         </nav>
-    </div>
+      </div>
     </header>
 
     <main>
@@ -133,7 +126,7 @@
 
         <!-- button to book a repair -->
         <div id="bookRepair">
-            <a href="bookARepar.html" class="btn-primary">Book a Repair</a>
+            <a href="bookARepair.html" class="btn-primary">Book a Repair</a>
         </div>
 
         <!-- price list as a table -->

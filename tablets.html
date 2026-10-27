@@ -1,5 +1,5 @@
-<html>
-  <head>
+<!DOCTYPE html>
+  <head lang="en">
     <title>Tablet</title>
     <!--JQuery CDN-->
     <script
@@ -13,7 +13,7 @@
     <style type = "text/css">
       #tablet-page {
         width: 100%;
-        margin: auto;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -26,7 +26,28 @@
         justify-content: center;
         
       }
+      .tablet-hero {
+        background-image: linear-gradient(rgb(0 0 0/ .55), rgb( 0 0 0/ .55)), url(images/tablets.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 24px;
+        padding: 60px 32px;
+        margin: 30px auto;
+        max-width: 1100px;
+        width: 70%;
+        height: 230px;
       
+      }
+      .tablet-hero h1 {
+        font-weight: 800;
+        color: #fff;
+      }
+      .tablet-hero p {
+        color: #fff;
+      }
+      .btn-primary {
+        margin-left: 15px !important;
+      }
     </style>
   </head>
 
@@ -40,30 +61,40 @@
         <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="phones.html" >Phones</a></li>
-          <li><a href="tablets.html" class = "active">Tablets</a></li>
+          <li><a href="phones.html">Phones</a></li>
+          <li><a href="tablets.html"  class = "active">Tablets</a></li>
           <li><a href="laptops.html">Laptops</a></li>
           <li><a href="repairs.html">Repairs</a></li>
-          <li><a href="bookARepar.html">Book a repair</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="bookARepair.html">Book a repair</a></li>
+          <li>
+            <div class = "about-dropdown">
+              <button class = "about-btn">About </button>
+              <div class = "drop-content">
+                <a href = "about.html">About</a>
+                <a href = "faq.html">FAQ</a>
+                <a href = "contact.html">Contact</a>
+              </div>
+            </div>
+          </li>
         </ul>
         </nav>
       </div>
     </header>
-
-
     <!-- Phone page container-->
     <div id="tablet-page" class="card-container">
 
       <!-- Intro section with filter buttons -->
-      <div class="header">
-        <h1>TABLETS</h1>
+      <section class="tablet-hero">
+        <h1>Tablets<span style="color: #ff5d3a;">.</span></h1>
         <p>
           Power, portability, and creativity in your hands.
         </p>
-        <img src = "images/tablets.jpg ">
+        <!-- button to book a laptop repair-->
+        
+      </section>
+      <div id="bookRepair">
+        <a href="bookARepair.html" class="btn-primary">Book a Tablet Repair</a>
       </div>
-
       <hr>
 
       <div class="filter-group">
@@ -81,6 +112,16 @@
 
       <!-- container with phone cards -->
       <div id="tablet-showcase"></div>
+
+      <!-- footer  -->
+      <footer class="site-footer">
+        <div class="container">
+        <!-- logo links to the home page -->
+          <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+          <p>&copy; 2026 Electronics Store. All rights reserved.</p>
+        </div>
+      </footer>
+
 
       <!-- event handling for buttons-->
       <script>

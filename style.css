@@ -9,7 +9,7 @@ h1,
 h2,
 h3 {
   font-family: "Manrope", sans-serif;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 h1 {
@@ -30,8 +30,8 @@ h3 {
 p {
   font-size: 20px;
   color: #000000;
-  margin: 10 10;
-  padding: 10 10;
+  margin: 10px 10px;
+  padding: 10px 10px;
   font-family: "Manrope", sans-serif;
 }
 
@@ -39,13 +39,49 @@ img {
   margin: 0 auto;
   border-radius: 5px 5px 0 0;
 }
+a { text-decoration: none; }
+
+.orange { color: #ff5d3a; }
+
+
+/* buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 0 10px 10px 0;
+  border: 1px solid #ff5d3a;
+  border-radius: 999px;
+}
+
+/*orange*/
+.btn-primary {
+  background-color: #ff5d3a;
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn-primary:hover {
+  background-color: #e94828;
+}
+
+.btn-secondary {
+  border-color: #171a1c;
+  color: #171a1c;
+}
+
+.btn-secondary:hover {
+  background-color: #171a1c;
+  color: #fff;
+}
 
 /* phones and tablet tabs */
 
 .header {
   display: flex;
   flex-wrap: wrap;
-  margin: 30 0;
+  flex-direction: column;
+  margin: 30px 0px;
 
   text-align: left;
 }
@@ -71,8 +107,8 @@ img {
   margin: 20 0 30 0;
 
   background-color: #FFF6E0;
-  border-top: 2px solid#ff5d3a;
-  border-bottom: 2px solid #ff5d3a;
+  border-top: 2px solid #dddddd;
+  border-bottom: 2px solid #dddddd;
 }
 
 .filter-btn {
@@ -81,10 +117,11 @@ img {
   border-radius: 999px;
   min-width: 100px;
   width: auto;
-  padding: 15 15;
+  padding: 15px 15px;
   margin: 15px;
 
   font-size: 20px;
+  font-family: "Manrope", sans-serif;
 }
 
 .filter-btn:hover {
@@ -98,6 +135,7 @@ img {
 
 
 .product-card {
+  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 
@@ -113,6 +151,10 @@ img {
   margin: 0 auto;
 }
 
+.product-card h3 {
+  color: #ff5d3a;
+}
+
 .card-content {
   background-color: #fff !important;
   padding: 2px 16px;
@@ -120,16 +162,25 @@ img {
   font-family: "Manrope", sans-serif;
 }
 
-.card-content h2 { font-size: 24px; }
-.card-content h3 { font-size: 20px; }
-.card-content p { font-size: 16px; }
+.card-content h2 {
+  font-size: 24px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+}
+
+.card-content p {
+  font-size: 16px;
+}
 
 /* nav bar and footer for every page*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box;
+  box-sizing: border-box;     
+
 }
 
 .site-header {
@@ -177,6 +228,48 @@ img {
   color: #171a1c;
 }
 
+.about-dropdown {
+  overflow: hidden;
+  padding: 24px 0;
+}
+
+.about-dropdown:hover {
+  color: #171a1c;
+}
+
+.about-btn {
+  border: none;
+  outline: none;
+  padding: 24px 0;
+  background-color: #FFF6E0;
+  color: #4a4d50;
+
+  font-family: "Manrope", sans-serif;
+  font-size: inherit;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  z-index:1;
+  background-color: #FFF6E0;
+
+}
+
+.about-dropdown:hover .drop-content{
+  display: block;
+}
+
+.drop-content a {
+  display: block;
+  color: #4a4d50;
+  text-decoration-line: none;
+  border-bottom: 2px solid #f7f7f4;
+}
+
+.drop-content a:hover {
+  color: #171a1c;
+}
 /* current page: dark text with orange underline */
 .nav-links a.active {
   color: #0099ff;
@@ -217,8 +310,14 @@ img {
     margin: 0 16px 0 0;
   }
 
+
   .nav-links a {
     padding: 10px 0;
+  }
+
+  .about-dropdown .drop-content a {
+    padding: 10px 0;
+  
   }
 
   .site-footer p {

@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="laptops, refurbished laptops, MacBook, Dell XPS, ThinkPad, laptop specs">
+  <meta name="keywords" content="laptops, refurbished laptops, MacBook, Dell XPS, Razer Blade, laptop specs">
   <title>Laptops</title>
   <script src="https://code.jquery.com/jquery-4.0.0.js"
         integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
@@ -13,9 +13,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
         main {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 16px;
+        }
+        /* same style as repairs.html */
+        .laptops-hero {
+            background-image: linear-gradient(rgb(0 0 0 / .55), rgb(0 0 0 / .55)), url(images/laptops-hero.jpg);
+            background-size: cover;
+            background-position: center 40%;
+            border-radius: 24px;
+            padding: 80px 32px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .laptops-hero h1, .laptops-hero p {
+            color: #fff;
+            margin: 0 0 16px;
+            padding: 0;
+        }
+        #intro {
+            max-width: 650px;
         }
         h1 {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -24,18 +42,7 @@
             margin-left: 0;
             padding: 0;
         }
-        .btn-primary {
-            display: inline-block;
-            padding: 12px 22px;
-            border: 1px solid #ff5d3a;
-            border-radius: 999px;
-            background-color: #ff5d3a;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background-color: #e94828;
-            border-color: #e94828;
-        }
+        
         #bookRepair {
             margin: 0 0 1.5em;
         }
@@ -73,41 +80,123 @@
         .toolbar select:hover {
             border-color: #ff5d3a;
         }
+        /* showcase row: giant image left half, details right half */
+        .laptop-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 48px;
+            row-gap: 24px;
+            align-items: center;
+            padding: 25px;
+            margin-bottom: 32px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .laptop-img {
+            grid-row: span 2;
+            height: 420px;
+            padding: 24px;
+            background-color: #f4f4f4;
+            border-radius: 16px;
+            box-sizing: border-box;
+        }
+        .laptop-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply;   /* white backgrounds melt into the tile */
+            border-radius: 0;
+        }
+        .laptop-info {
+            align-self: end;      /* hug the specs from above */
+        }
+        .laptop-info h3 {
+            margin: 0 0 8px;
+            padding: 0;
+            font-size: clamp(28px, 3vw, 40px);
+            color: #171a1c;
+        }
+        .laptop-info .price {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            font-weight: 800;
+            color: #ff5d3a;
+        }
+        .specs {
+            align-self: start;    /* hug the name from below */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 32px;
+        }
+        .specs .label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #7d7676;
+        }
+        .specs .value {
+            display: block;
+            margin-top: 4px;
+            font-size: 16px;
+            font-weight: 600;
+        }
         @media (max-width: 500px) {
             .toolbar { flex-wrap: wrap; }
             .toolbar h2 { width: 100%; }
             #brandFilter { margin-left: 0; }
+            .laptop-row { grid-template-columns: 1fr; padding: 20px; }
+            .laptop-img { grid-row: auto; height: 260px; }
+            .laptops-hero { padding: 48px 20px; }
         }
   </style>
 </head>
 <body>
 
-    <!-- header  -->
-    <header class="site-header">
-    <div class="container">
+    <!-- ===== nav bar ===== -->
+      <header class="site-header">
+      <div class="container">
         <!-- logo links to the home page -->
         <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
 
         <nav>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="phones.html">Phones</a></li>
-            <li><a href="tablets.html">Tablets</a></li>
-            <li><a href="laptops.html" class="active">Laptops</a></li>
-            <li><a href="repairs.html">Repairs</a></li>
-            <li><a href="bookARepar.html">Book a repair</a></li>
-            <li><a href="about.html">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phones.html" >Phones</a></li>
+          <li><a href="tablets.html">Tablets</a></li>
+          <li><a href="laptops.html" class = "active">Laptops</a></li>
+          <li><a href="repairs.html">Repairs</a></li>
+          <li><a href="bookARepair.html">Book a repair</a></li>
+          <li>
+            <div class = "about-dropdown">
+              <button class = "about-btn">About </button>
+              <div class = "drop-content">
+                <a href = "about.html">About</a>
+                <a href = "faq.html">FAQ</a>
+                <a href = "contact.html">Contact</a>
+              </div>
+            </div>
+          </li>
         </ul>
         </nav>
-    </div>
+      </div>
     </header>
 
     <main>
-        <h1>Laptops<span style="color: #ff5d3a;">.</span></h1>
+        <!-- hero + h1 + intro para -->
+        <section id="page-intro" class="laptops-hero">
+            <h1>Laptops<span style="color: #ff5d3a;">.</span></h1>
+            <p id="intro">
+                From everyday ultrabooks to full-power gaming rigs, every laptop we sell is
+                tested, cleaned, and backed by our 12-month warranty.
+            </p>
+        </section>
         
         <!-- button to book a laptop repair-->
         <div id="bookRepair">
-            <a href="bookARepar.html" class="btn-primary">Book a Laptop Repair</a>
+            <a href="bookARepair.html" class="btn-primary">Book a Laptop Repair</a>
         </div>
 
         <!-- laptop list: toolbar (filter/sort) + rows -->
@@ -145,7 +234,92 @@
     </footer>
     
     <script>
-        // to be done: all the JS for sorting and filtering and populating the rows
+
+        // constructing a home-grown object for one laptop
+        function Laptop(data) {
+            this.name = data.name;
+            this.brand = data.brand;
+            this.price = data.price;
+            this.processor = data.processor;
+            this.ram = data.ram;
+            this.storage = data.storage;
+            this.screen = data.screen;
+            this.battery = data.battery;
+            this.image = data.image;
+            this.toHTML = toHTML;
+        }
+
+        // method to build the HTML for one row
+        function toHTML() {
+            return "<div class='laptop-row'>" +
+                       "<div class='laptop-img'><img src='" + this.image + "' alt='" + this.name + "'></div>" +
+                       "<div class='laptop-info'>" +
+                           "<h3>" + this.name + "</h3>" +
+                           "<p class='price'>$" + this.price + "</p>" +
+                       "</div>" +
+                       "<div class='specs'>" +
+                           "<div><span class='label'>Processor</span><span class='value'>" + this.processor + "</span></div>" +
+                           "<div><span class='label'>RAM</span><span class='value'>" + this.ram + "</span></div>" +
+                           "<div><span class='label'>Storage</span><span class='value'>" + this.storage + "</span></div>" +
+                           "<div><span class='label'>Screen</span><span class='value'>" + this.screen + "</span></div>" +
+                           "<div><span class='label'>Battery</span><span class='value'>" + this.battery + "</span></div>" +
+                       "</div>" +
+                   "</div>";
+        }
+
+        // an associative array that gives sorting rules to be used by sort() later
+        const sorters = {
+            "price-ascending":  function (a, b) { return a.price - b.price; },
+            "price-descending": function (a, b) { return b.price - a.price; },
+            "name":             function (a, b) {
+                                    if (a.name < b.name) return -1;
+                                    if (a.name > b.name) return 1;
+                                    return 0;
+                                },
+            "ram":              function (a, b) { return parseInt(b.ram) - parseInt(a.ram); },
+            "battery":          function (a, b) { return parseInt(b.battery) - parseInt(a.battery); }
+        };
+
+        let allLaptops = [];
+
+        // builds each row in the list into the #laptop-list div and also updates the count
+        function renderLaptops(list) {
+            let output = "";
+            for (let laptop of list) {
+                output += laptop.toHTML();
+            }
+            $("#laptop-list").html(output);
+            $("#count").html("(" + list.length + ")");
+        }
+
+        // function to apply chosen filter/sort
+        function updateList() {
+            let brand = $("#brandFilter").val();
+            let sortBy = $("#sortBy").val();
+
+            let list = allLaptops.filter(function (laptop) {
+                return brand === "all" || laptop.brand === brand;
+            });
+
+            if (sorters[sortBy]) {
+                list.sort(sorters[sortBy]);
+            }
+
+            renderLaptops(list);
+        }
+
+        // loads laptops from products.json
+        // turns each into a Laptop object
+        // draws them
+        $.getJSON("products.json", function (data) {
+            allLaptops = data.laptops.map(function (item) {
+                return new Laptop(item);
+            });
+            renderLaptops(allLaptops);
+        });
+
+        // whenever sort drop down or filter changes, rerun updateList
+        $("#brandFilter, #sortBy").on("change", updateList);
     </script>
 </body>
 </html>

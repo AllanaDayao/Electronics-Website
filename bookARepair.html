@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+  <head lang="en">
+    <title>Book A Repair</title>
+    <!--JQuery CDN-->
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.js"
+      integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+      crossorigin="anonymous"
+    ></script>
+
+    <style type = "text/css">
+
+      #book-container {
+        max-width: 700px;
+        margin: 40px auto ;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      
+      .form-card {
+        display: grid;
+        max-width: 700px;
+        background-color: #ffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #e5e5e5;
+        border-radius: 18px;
+        padding: 40px;
+      }
+      .form-card label {
+        display: block;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        font-size: 15px;
+      }
+      .form-card input[type = "text"],
+      .form-card select,
+      .form-card textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #dddddd;
+        border-radius: 15px;
+
+        font-family:"Manrope", sans-serif;
+        font-size: 15px;
+        box-sizing: border-box;
+
+      }
+
+      .form-card textarea {
+        resize: none;
+        height: 200px !important;
+      }
+
+      .error-msg {
+        color: #ef846c;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+      
+      .submit-btn{
+        display: inline-block;
+        padding: 12px 22px;
+        margin: 0 10px 10px 0;
+        border: 1px solid #ff5d3a;
+        background-color: #ff5d3a;
+        border-radius: 999px;
+
+        color: #ffff;
+        font-size: 25px;
+        font-family:"Manrope", sans-serif;
+
+        transition: background 0.5s;
+        cursor: pointer;
+      }
+      .book-hero {
+        background-image: linear-gradient(rgb(0 0 0/ .55), rgb( 0 0 0/ .55)), url(images/repair.jpg);
+        background-size:cover;
+        background-position: center;
+        border-radius: 24px;
+        padding: 60px 32px;
+        margin: 30px auto;
+        max-width: 1100px;
+      
+      }
+      .book-hero h1 {
+        font-weight: 800;
+        color: #fff;
+      }
+      .book-hero p {
+        color: #fff;
+      }
+      
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="form.js"></script>
+  </head>
+
+  <body>
+    <!-- ===== nav bar ===== -->
+      <header class="site-header">
+      <div class="container">
+        <!-- logo links to the home page -->
+        <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+
+        <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="phones.html">Phones</a></li>
+          <li><a href="tablets.html">Tablets</a></li>
+          <li><a href="laptops.html">Laptops</a></li>
+          <li><a href="repairs.html">Repairs</a></li>
+          <li><a href="bookARepair.html"  class = "active">Book a repair</a></li>
+          <li>
+            <div class = "about-dropdown">
+              <button class = "about-btn">About </button>
+              <div class = "drop-content">
+                <a href = "about.html">About</a>
+                <a href = "faq.html">FAQ</a>
+                <a href = "contact.html">Contact</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </nav>
+      </div>
+    </header>
+
+    
+    <div id = "book-container">
+        <section class = "book-hero">
+          <h1>Book A Repair<span style="color: #ff5d3a;">.</span></h1>
+          <p>Lets get it fixed</p>
+          
+          <p> Tell us a little about your device.</p>
+        </section>
+
+        <a href="repairs.html" class = "btn-primary">Review Prices</a>
+
+
+      <div class = "form-card">
+
+        <div id = "thank-you"></div>
+
+        <form id = "repairForm" name = "repairForm" onsubmit = "return validate()">
+
+          <!--Name field-->
+          <label>Name</label> 
+          <input type = "text" name = 'name' id = 'the_name' placeholder = "Full name">
+          <div id = "nameError" class = "error-msg"></div>
+          <br />
+          
+          <!--Emali field-->
+          <label type = "text">Email: </label>
+          <input type = "text" name = "emailAdd" id = "email" placeholder = "you@example.com">
+          <div id = "emailError" class = "error-msg"></div>
+          <br />
+
+          <!--Device type dropdown-->
+          <label type = "text">Device Type</label>
+            <select name = "Devices" id = "selectDevice">
+              <option value = " ">Select A Device</option>
+              <option value = "Phones">Phones</option>
+              <option value = "Laptops">Laptops</option>
+              <option value = Tablets>Tablets</option>
+            </select>
+          <div id = "deviceError" class = "error-msg"></div>
+          <br />
+
+          <!--Urgency radio buttons-->
+          <label type = "text">Urgency</label>
+          <label>
+            <input type = "radio" name = "urgency" value = "rush">Rush
+          </label>
+          <label type = "text">
+            <input type = "radio" name = "urgency" value = "standard">Standard
+          </label>
+          <div id = "urgencyError" class = "error-msg"></div>
+          <br />
+
+          <!--Checkbox-->
+          <label type = "text">
+            <input type = "checkbox" name = "checkBackUp" value = "back_up">Back up my data?
+          </label>
+          <br />
+          
+          <!--describe text area-->
+          <label type = "text">Describe the problem</label>
+          <textarea id = "problem" name = "problem" style = "height: 200px"></textarea>
+          <div id = "describeError" class = "error-msg"></div>
+          <br />
+
+          <!--Submit button-->
+          <input type = "submit" value = "Submit" class = "submit-btn">
+        </form>
+
+      </div>
+
+      
+    
+    </div>
+    <!-- footer  -->
+    <footer class="site-footer">
+      <div class="container">
+      <!-- logo links to the home page -->
+        <a href="index.html" class="logo"><strong>Electronics <span>Store</span></strong></a>
+        <p>&copy; 2026 Electronics Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+  </body>
+</html>
